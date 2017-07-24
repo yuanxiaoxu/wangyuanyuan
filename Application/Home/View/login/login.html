@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+    <form action="__SELF__" method="post" enctype="multipart/form-data">
+        用户名：<input type="text" name="username"/>
+        <div id="error" style="color: red;display: none;float: right;margin-left: 100px;">账号或密码不正确</div>
+        <br>
+        密&nbsp;&nbsp;&nbsp;码：<input type="password" name="password"/><br>
+        <input type="submit" value="登录" onclick="send()"/>
+    </form>
+</body>
+<script>
+    var a="{$info}";
+    if(a=="error"){
+        var a=document.getElementById("error");
+        a.style.display="block";
+    }
+</script>
+</html>
